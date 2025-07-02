@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: manhwa_front
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - VITE_API_URL=http://localhost:5193
+    networks:
+      - manhwa_front_network
+
+networks:
+  manhwa_front_network:
+    driver: bridge
