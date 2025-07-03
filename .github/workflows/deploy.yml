@@ -1,4 +1,4 @@
-name: Deploy to Azure App Service
+name: Deploy Remix App to Azure App Service
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build the project
+      - name: Build Remix app
         run: npm run build
 
       - name: Prepare ZIP artifact
